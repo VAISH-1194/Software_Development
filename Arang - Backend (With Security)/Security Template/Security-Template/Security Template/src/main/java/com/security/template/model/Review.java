@@ -1,5 +1,8 @@
-package com.arang.backend.model;
+package com.security.template.model;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,6 +21,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String comment;
+    @JsonIgnore
     @ManyToOne
 
     private Users user;

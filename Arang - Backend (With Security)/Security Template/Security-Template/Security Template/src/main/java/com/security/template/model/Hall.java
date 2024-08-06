@@ -1,5 +1,4 @@
-package com.arang.backend.model;
-
+package com.security.template.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,14 +11,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Review {
-
+public class Hall {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String comment;
-    @ManyToOne
+    private Long hallId;
 
-    private Users user;
+    private String hallName;
+    private String hallAddress;
+
+    private String hallType;
+    private int hallSize;
 
 }
